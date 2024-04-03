@@ -350,5 +350,24 @@
         </div>
       </div>
     </div>
+    <script>
+      const changeNavBar = () => {
+        const navBar = document.querySelector(".nav-bar");
+        const button = document.querySelector(".nav-btn");
+        if (
+          document.body.scrollTop > 120 ||
+          document.documentElement.scrollTop > 120
+        ) {
+          navBar.style = "background-color: white";
+          button.style = "background-color: green";
+        } else {
+          navBar.style = "background-color : #ffc017";
+          button.style = "background-color: black";
+        }
+      };
+      window.onscroll = function () {
+        changeNavBar();
+      };
+    </script>
   </body>
 </html>
